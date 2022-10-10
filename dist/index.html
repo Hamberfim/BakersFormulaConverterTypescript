@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="Anthony Hamlin" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container-fluid overflow-hidden">
+      <div class="row mt-2">
+        <div class="col-12"><!--TODO: left blank - fix--></div>
+      </div>
+      <form action="" method="post">
+        <div class="row">
+          <div class="col-4">
+            <!-- flour -->
+            <label for="flourBase" class="form-lable text-nowrap">Flour (as 100%):</label>
+            <input type="text" class="form-control" id="flourBase" aria-describedby="flour percentage base amount" readonly value="100%" />
+            <!-- water -->
+            <label for="waterInput" class="form-lable text-nowrap">Water:</label>
+            <input type="text" class="form-control" id="waterInput" aria-describedby="water amount" value="" />
+            <!-- salt -->
+            <label for="saltInput" class="form-lable text-nowrap">Salt:</label>
+            <input type="text" class="form-control" id="saltInput" aria-describedby="salt amount" value="" />
+            <!-- yeast -->
+            <label for="yeastInput" class="form-lable text-nowrap">Yeast:</label>
+            <input type="text" class="form-control" id="yeastInput" aria-describedby="yeast amount" value="" />
+            <!-- sourdough starter -->
+            <label for="starterInput" class="form-lable text-nowrap">Starter (not required):</label>
+            <input type="text" class="form-control" id="starterInput" aria-describedby="sourdough starter amount" value="0" />
+            <!-- fat/oil -->
+            <label for="fatInput" class="form-lable text-nowrap">Fat/Oil (not required):</label>
+            <input type="text" class="form-control" id="fatInput" aria-describedby="fat/oil amount" value="0" />
+          </div>
+          <div class="col-4">
+            <!-- flour -->
+            <label for="flourInputBase" class="form-lable text-nowrap">*Flour in grams</label>
+            <input type="text" class="form-control" id="flourInputBase" aria-describedby="flour input amount" value="" />
+            <!-- water -->
+            <label for="waterResultsQuantity" class="form-lable text-nowrap">Water in grams:</label>
+            <input type="text" class="form-control" id="waterResultsQuantity" aria-describedby="water percentage base amount" readonly value="" />
+            <!-- salt -->
+            <label for="saltResultsQuantity" class="form-lable text-nowrap">Salt in grams:</label>
+            <input type="text" class="form-control" id="saltResultsQuantity" aria-describedby="salt percentage base amount" readonly value="" />
+            <!-- yeast -->
+            <label for="yeastResultsQuantity" class="form-lable text-nowrap">Yeast in grams:</label>
+            <input type="text" class="form-control" id="yeastResultsQuantity" aria-describedby="yeast percentage base amount" readonly value="" />
+            <!-- sourdough starter -->
+            <label for="starterResultsQuantity" class="form-lable text-nowrap">Starter in grams:</label>
+            <input type="text" class="form-control" id="starterResultsQuantity" aria-describedby="starter percentage base amount" readonly value="0" />
+            <!-- fat/oil -->
+            <label for="fatResultsQuantity" class="form-lable text-nowrap">Fat/Oil in grams:</label>
+            <input type="text" class="form-control" id="fatResultsQuantity" aria-describedby="fat/oil percentage base amount" readonly value="0" />
+          </div>
+        </div>
+        <div class="mt-2">
+          <input type="button" class="btn btn-primary my-1" name="calculate" value="Calculate" onclick="calculateFormula()" />
+          <input type="reset" class="btn btn-primary my-1" name="Reset" id="resetButton" value="Reset" />
+        </div>
+      </form>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
