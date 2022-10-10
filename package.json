@@ -1,0 +1,14 @@
+{
+  "name": "bakersformula",
+  "version": "1.0.0",
+  "description": "Convert Baker's Volume Percent Formulas to usable (weight in grams) recipes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anthony D Hamlin - A.K.A., Hamberfim",
+  "license": "RESTRICTED-Contact Author",
+  "dependencies": {
+    "typescript": "^4.8.4"
+  }
+}
