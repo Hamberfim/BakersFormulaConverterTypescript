@@ -42,7 +42,6 @@ function calculateFormula() {
     catch (error) {
         console.error(error);
     }
-    console.log(fatInput); // TODO: REMOVE
     //====== Water Calculations ======
     // water percent to decimal
     let waterOut = waterInput / 100;

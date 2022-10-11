@@ -17,92 +17,47 @@
   <body>
     <div class="container-fluid overflow-hidden">
       <div class="row mt-2">
-        <div class="col-12">
-          <h3>Baker's Formula Converter</h3>
-        </div>
-      </div>
-      <div class="row mt-2">
-        <div class="col-4">
-          <h3>Formula</h3>
-        </div>
-        <div class="col-1"></div>
-        <div class="col-4">
-          <h3>Recipe</h3>
-        </div>
+        <div class="col-12"><!--TODO: left blank - fix--></div>
       </div>
       <form action="" method="post">
         <div class="row">
-          <div class="col-4"></div>
-          <div class="col-4"></div>
-        </div>
-        <div class="row">
           <div class="col-4">
-            <!-- flour in -->
-            <label for="flourBase" class="form-lable text-nowrap">Flour:</label>
+            <!-- flour -->
+            <label for="flourBase" class="form-lable text-nowrap">Flour (as 100%):</label>
             <input type="text" class="form-control" id="flourBase" aria-describedby="flour percentage base amount" readonly value="100%" />
-          </div>
-          <div class="col-4">
-            <!-- flour out -->
-            <label for="flourInputBase" class="form-lable text-nowrap">*Flour in grams</label>
-            <input type="text" class="form-control" id="flourInputBase" aria-describedby="flour input amount" value="" />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-4">
-            <!-- water in -->
+            <!-- water -->
             <label for="waterInput" class="form-lable text-nowrap">Water:</label>
             <input type="text" class="form-control" id="waterInput" aria-describedby="water amount" value="" />
-          </div>
-          <div class="col-4">
-            <!-- water out -->
-            <label for="waterResultsQuantity" class="form-lable text-nowrap">Water in grams:</label>
-            <input type="text" class="form-control" id="waterResultsQuantity" aria-describedby="water percentage base amount" readonly value="" />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-4">
-            <!-- salt in -->
+            <!-- salt -->
             <label for="saltInput" class="form-lable text-nowrap">Salt:</label>
             <input type="text" class="form-control" id="saltInput" aria-describedby="salt amount" value="" />
-          </div>
-          <div class="col-4">
-            <!-- salt out -->
-            <label for="saltResultsQuantity" class="form-lable text-nowrap">Salt in grams:</label>
-            <input type="text" class="form-control" id="saltResultsQuantity" aria-describedby="salt percentage base amount" readonly value="" />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-4">
-            <!-- yeast in -->
+            <!-- yeast -->
             <label for="yeastInput" class="form-lable text-nowrap">Yeast:</label>
             <input type="text" class="form-control" id="yeastInput" aria-describedby="yeast amount" value="" />
-          </div>
-          <div class="col-4">
-            <!-- yeast out -->
-            <label for="yeastResultsQuantity" class="form-lable text-nowrap">Yeast in grams:</label>
-            <input type="text" class="form-control" id="yeastResultsQuantity" aria-describedby="yeast percentage base amount" readonly value="" />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-4">
-            <!-- sourdough starter in -->
-            <label for="starterInput" class="form-lable text-nowrap">Starter:</label>
+            <!-- sourdough starter -->
+            <label for="starterInput" class="form-lable text-nowrap">Starter (not required):</label>
             <input type="text" class="form-control" id="starterInput" aria-describedby="sourdough starter amount" value="0" />
-          </div>
-          <div class="col-4">
-            <!-- sourdough starter out -->
-            <label for="starterResultsQuantity" class="form-lable text-nowrap">Starter in grams:</label>
-            <input type="text" class="form-control" id="starterResultsQuantity" aria-describedby="starter percentage base amount" readonly value="0" />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-4">
-            <!-- fat/oil in -->
-            <label for="fatInput" class="form-lable">Fat/Oil:</label>
+            <!-- fat/oil -->
+            <label for="fatInput" class="form-lable text-nowrap">Fat/Oil (not required):</label>
             <input type="text" class="form-control" id="fatInput" aria-describedby="fat/oil amount" value="0" />
           </div>
           <div class="col-4">
-            <!-- fat/oil out -->
+            <!-- flour -->
+            <label for="flourInputBase" class="form-lable text-nowrap">*Flour in grams</label>
+            <input type="text" class="form-control" id="flourInputBase" aria-describedby="flour input amount" value="" />
+            <!-- water -->
+            <label for="waterResultsQuantity" class="form-lable text-nowrap">Water in grams:</label>
+            <input type="text" class="form-control" id="waterResultsQuantity" aria-describedby="water percentage base amount" readonly value="" />
+            <!-- salt -->
+            <label for="saltResultsQuantity" class="form-lable text-nowrap">Salt in grams:</label>
+            <input type="text" class="form-control" id="saltResultsQuantity" aria-describedby="salt percentage base amount" readonly value="" />
+            <!-- yeast -->
+            <label for="yeastResultsQuantity" class="form-lable text-nowrap">Yeast in grams:</label>
+            <input type="text" class="form-control" id="yeastResultsQuantity" aria-describedby="yeast percentage base amount" readonly value="" />
+            <!-- sourdough starter -->
+            <label for="starterResultsQuantity" class="form-lable text-nowrap">Starter in grams:</label>
+            <input type="text" class="form-control" id="starterResultsQuantity" aria-describedby="starter percentage base amount" readonly value="0" />
+            <!-- fat/oil -->
             <label for="fatResultsQuantity" class="form-lable text-nowrap">Fat/Oil in grams:</label>
             <input type="text" class="form-control" id="fatResultsQuantity" aria-describedby="fat/oil percentage base amount" readonly value="0" />
           </div>
