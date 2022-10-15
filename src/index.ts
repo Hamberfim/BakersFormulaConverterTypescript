@@ -1,38 +1,41 @@
 // base flour calculations
 function calculateFormula() {
   // 100% base flour/ flour input in grams
-  const flourInputBaseStr: string = (<HTMLInputElement>document.querySelector("#flourInputBase")).value;
-  let flourInputBase: number;
+  let flourInputBaseStr: string = (<HTMLInputElement>document.querySelector("#flourInputBase")).value;
+  let flourInputBase!: number;
   // get water percent
-  const waterInputStr: string = (<HTMLInputElement>document.querySelector("#waterInput")).value;
-  let waterInput: number;
+  let waterInputStr: string = (<HTMLInputElement>document.querySelector("#waterInput")).value;
+  let waterInput!: number;
   //get salt percent
-  const saltInputStr: string = (<HTMLInputElement>document.querySelector("#saltInput")).value;
-  let saltInput: number;
+  let saltInputStr: string = (<HTMLInputElement>document.querySelector("#saltInput")).value;
+  let saltInput!: number;
   // get yeast percent
-  const yeastInputStr: string = (<HTMLInputElement>document.querySelector("#yeastInput")).value;
-  let yeastInput: number;
+  let yeastInputStr: string = (<HTMLInputElement>document.querySelector("#yeastInput")).value;
+  let yeastInput!: number;
   // get starter percent
-  const starterInputStr: string = (<HTMLInputElement>document.querySelector("#starterInput")).value;
-  let starterInput: number;
+  let starterInputStr: string = (<HTMLInputElement>document.querySelector("#starterInput")).value;
+  let starterInput!: number;
   // get Fat/oil percent
-  const fatInputStr: string = (<HTMLInputElement>document.querySelector("#fatInput")).value;
-  let fatInput: number;
+  let fatInputStr: string = (<HTMLInputElement>document.querySelector("#fatInput")).value;
+  let fatInput!: number;
+
+  // validate form input
   try {
     flourInputBase = parseFloat(flourInputBaseStr);
-    if (isNaN(flourInputBase)) throw "Flour input is not a number";
+    if (isNaN(flourInputBase) || !parseFloat(flourInputBaseStr)) throw "Flour input needs to be a number.";
     waterInput = parseFloat(waterInputStr);
-    if (isNaN(waterInput)) throw "Water input is not a number";
+    if (isNaN(waterInput)) throw "Water input needs to be a number.";
     saltInput = parseFloat(saltInputStr);
-    if (isNaN(saltInput)) throw "Salt input is not a number";
+    if (isNaN(saltInput)) throw "Salt input needs to be a number.";
     yeastInput = parseFloat(yeastInputStr);
-    if (isNaN(saltInput)) throw "Yeast input is not a number";
+    if (isNaN(saltInput)) throw "Yeast input needs to be a number.";
     starterInput = parseFloat(starterInputStr);
-    if (isNaN(starterInput)) throw "Starter input is not a number";
+    if (isNaN(starterInput)) throw "Starter input needs to be a number.";
     fatInput = parseFloat(fatInputStr);
-    if (isNaN(fatInput)) throw "Fat/Oil input is not a number";
+    if (isNaN(fatInput)) throw "Fat/Oil input needs to be a number.";
   } catch (error) {
     console.error(error);
+    alert(error);
   }
 
   //====== Water Calculations ======
@@ -68,4 +71,33 @@ function calculateFormula() {
   // // calculate Fat/oil to grams based on flour weight
   let fatResultsQuantity = fatOut * flourInputBase;
   (<HTMLInputElement>document.querySelector("#fatResultsQuantity")).value = fatResultsQuantity.toString();
+}
+
+function resetForm() {
+  let flourInputBaseStr: string = ((<HTMLInputElement>document.querySelector("#flourInputBase")).value = "500");
+}
+
+function clearForm() {
+  // get flour input in grams
+  let flourInputBaseStr: string = ((<HTMLInputElement>document.querySelector("#flourInputBase")).value = "");
+
+  // get water percent
+  let waterInputStr: string = ((<HTMLInputElement>document.querySelector("#waterInput")).value = "");
+  (<HTMLInputElement>document.querySelector("#waterResultsQuantity")).value = "";
+
+  //get salt percent
+  let saltInputStr: string = ((<HTMLInputElement>document.querySelector("#saltInput")).value = "");
+  (<HTMLInputElement>document.querySelector("#saltResultsQuantity")).value = "";
+
+  // get yeast percent
+  let yeastInputStr: string = ((<HTMLInputElement>document.querySelector("#yeastInput")).value = "");
+  (<HTMLInputElement>document.querySelector("#yeastResultsQuantity")).value = "";
+
+  // get starter percent
+  let starterInputStr: string = ((<HTMLInputElement>document.querySelector("#starterInput")).value = "");
+  (<HTMLInputElement>document.querySelector("#starterResultsQuantity")).value = "";
+
+  // get Fat/oil percent
+  let fatInputStr: string = ((<HTMLInputElement>document.querySelector("#fatInput")).value = "");
+  (<HTMLInputElement>document.querySelector("#fatResultsQuantity")).value = "";
 }

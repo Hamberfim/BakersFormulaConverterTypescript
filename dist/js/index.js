@@ -2,45 +2,47 @@
 // base flour calculations
 function calculateFormula() {
     // 100% base flour/ flour input in grams
-    const flourInputBaseStr = document.querySelector("#flourInputBase").value;
+    let flourInputBaseStr = document.querySelector("#flourInputBase").value;
     let flourInputBase;
     // get water percent
-    const waterInputStr = document.querySelector("#waterInput").value;
+    let waterInputStr = document.querySelector("#waterInput").value;
     let waterInput;
     //get salt percent
-    const saltInputStr = document.querySelector("#saltInput").value;
+    let saltInputStr = document.querySelector("#saltInput").value;
     let saltInput;
     // get yeast percent
-    const yeastInputStr = document.querySelector("#yeastInput").value;
+    let yeastInputStr = document.querySelector("#yeastInput").value;
     let yeastInput;
     // get starter percent
-    const starterInputStr = document.querySelector("#starterInput").value;
+    let starterInputStr = document.querySelector("#starterInput").value;
     let starterInput;
     // get Fat/oil percent
-    const fatInputStr = document.querySelector("#fatInput").value;
+    let fatInputStr = document.querySelector("#fatInput").value;
     let fatInput;
+    // validate form input
     try {
         flourInputBase = parseFloat(flourInputBaseStr);
-        if (isNaN(flourInputBase))
-            throw "Flour input is not a number";
+        if (isNaN(flourInputBase) || !parseFloat(flourInputBaseStr))
+            throw "Flour input needs to be a number.";
         waterInput = parseFloat(waterInputStr);
         if (isNaN(waterInput))
-            throw "Water input is not a number";
+            throw "Water input needs to be a number.";
         saltInput = parseFloat(saltInputStr);
         if (isNaN(saltInput))
-            throw "Salt input is not a number";
+            throw "Salt input needs to be a number.";
         yeastInput = parseFloat(yeastInputStr);
         if (isNaN(saltInput))
-            throw "Yeast input is not a number";
+            throw "Yeast input needs to be a number.";
         starterInput = parseFloat(starterInputStr);
         if (isNaN(starterInput))
-            throw "Starter input is not a number";
+            throw "Starter input needs to be a number.";
         fatInput = parseFloat(fatInputStr);
         if (isNaN(fatInput))
-            throw "Fat/Oil input is not a number";
+            throw "Fat/Oil input needs to be a number.";
     }
     catch (error) {
         console.error(error);
+        alert(error);
     }
     //====== Water Calculations ======
     // water percent to decimal
@@ -72,4 +74,26 @@ function calculateFormula() {
     // // calculate Fat/oil to grams based on flour weight
     let fatResultsQuantity = fatOut * flourInputBase;
     document.querySelector("#fatResultsQuantity").value = fatResultsQuantity.toString();
+}
+function resetForm() {
+    let flourInputBaseStr = (document.querySelector("#flourInputBase").value = "500");
+}
+function clearForm() {
+    // get flour input in grams
+    let flourInputBaseStr = (document.querySelector("#flourInputBase").value = "");
+    // get water percent
+    let waterInputStr = (document.querySelector("#waterInput").value = "");
+    document.querySelector("#waterResultsQuantity").value = "";
+    //get salt percent
+    let saltInputStr = (document.querySelector("#saltInput").value = "");
+    document.querySelector("#saltResultsQuantity").value = "";
+    // get yeast percent
+    let yeastInputStr = (document.querySelector("#yeastInput").value = "");
+    document.querySelector("#yeastResultsQuantity").value = "";
+    // get starter percent
+    let starterInputStr = (document.querySelector("#starterInput").value = "");
+    document.querySelector("#starterResultsQuantity").value = "";
+    // get Fat/oil percent
+    let fatInputStr = (document.querySelector("#fatInput").value = "");
+    document.querySelector("#fatResultsQuantity").value = "";
 }
