@@ -19,7 +19,8 @@
     <div class="container-fluid overflow-hidden">
       <div class="row mt-2">
         <div class="col-12">
-          <h1>Baker's Formula Converter</h1>
+          <h1 class="text-primary">Baker's Formula Converter</h1>
+          <hr class="bg-primary mt-0 mb-1" aria-hidden="true" />
           <p class="lead">Convert baker's percent formulas into gram based recipes.</p>
         </div>
       </div>
@@ -106,6 +107,7 @@
               <input type="button" class="btn btn-primary my-1" name="calculate" value="Calculate" onclick="calculateFormula()" aria-label="calculate recipe" />
               <input type="reset" class="btn btn-primary my-1" name="reset" id="resetButton" value="Reset Form" onclick="resetForm()" aria-label="reset form" />
               <input type="button" class="btn btn-primary my-1" name="clear" id="clearButton" value="Clear Form" onclick="clearForm()" aria-label="clear form" />
+              <hr class="bg-primary mt-3 mb-0" aria-hidden="true" />
             </div>
           </form>
         </div>
@@ -120,7 +122,11 @@
                   calculations are to divide the ingredient percentage by 100 to obtain a decimal, then multiply the resulting decimal by the weight of the flour. **The form
                   requires flour, water, salt and yeast as inputs while starter and fat/oil are optional.
                 </p>
-                <h5>Form default formula example</h5>
+                <div class="alert alert-primary alert-dismissible fade show mt-0 mb-1 py-1 pb-0" role="alert">
+                  <h5>Check Out The Default Form Example</h5>
+                  <button type="button" class="btn-close pt-0" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <h5>Formula Example</h5>
                 <p class="fs-6 mt-0 mb-0">Napolitano Pizza Dough:</p>
                 <span class="ms-2">Flour: 100%, Water: 69.1%, Salt: 2.2%, Yeast: 0.5%</span>
                 <p class="mt-2">Assuming we need *500 grams of flour to make enough dough, we calculate the weights of each of the additional ingredients like this:</p>
@@ -132,7 +138,11 @@
                   Yeast: 0.5 divided by 100 = 0.005 * 500 = 2.5g yeast
                 </p>
                 <p>So our resulting conversion of the formula to a recipe is 500g flour, 345.5g water, 11g of salt and 2.5g of yeast.</p>
-                <p class="fs-5 mb-0">Popular Formula's to Try</p>
+                <div class="alert alert-primary alert-dismissible fade show mt-0 mb-1 py-1 pb-0" role="alert">
+                  <h5>Try Some Popular Formulas</h5>
+                  <button type="button" class="btn-close pt-0" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <p class="fs-5 mb-0">Popular Formulas</p>
                 <p class="fs-6 mt-0 mb-0">Sourdough Baguette:</p>
                 <span class="ms-2">Flour: 100%, Water: 73%, Salt: 2.0%, Yeast: 2.0%, Starter: 3.33%</span>
                 <p class="fs-6 mt-1 mb-0">Ciabatta:</p>
@@ -141,7 +151,8 @@
                 <span class="ms-2">Flour: 100%, Water: 79.6%, Salt: 2.0%, Yeast: 0.7%</span>
               </div>
               <div class="small mt-3">
-                <p class="mb-1">Proudly made with Typescript.</p>
+                <hr class="bg-primary mt-2 mb-2" aria-hidden="true" />
+                <p class="mb-1">Proudly made with Typescript, HTML, & Bootstrap.</p>
                 <p class="mb-1">
                   This content may not be copied, adapted, remixed, redistributed or used for commercial purposes without the expressed written consent of the author.
                 </p>
