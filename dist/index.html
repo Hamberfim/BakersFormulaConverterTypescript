@@ -26,6 +26,64 @@
       </div>
       <!-- form columns -->
       <div class="row mt-2">
+        <div class="col-md-4">
+          <!-- instructions -->
+          <div class="row">
+            <div class="col-12">
+              <h2>Instructions</h2>
+              <div class="small">
+                <p>
+                  Baker's formulas are a way to express the proportion of each ingredient relative to the total amount
+                  of flour. *The flour weight is always expressed as 100%. The calculations are to divide the ingredient
+                  percentage by 100 to obtain a decimal, then multiply the resulting decimal by the weight of the flour.
+                  **The form requires flour, water, salt and yeast as inputs while starter and fat/oil are optional.
+                </p>
+                <div class="alert alert-primary alert-dismissible fade show mt-0 mb-1 py-1 pb-0" role="alert">
+                  <h5>Check Out The Default Form Example</h5>
+                  <button type="button" class="btn-close pt-0" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <h5>Formula Example</h5>
+                <p class="fs-6 mt-0 mb-0">Napolitano Pizza Dough:</p>
+                <span class="ms-2">Flour: 100%, Water: 69.1%, Salt: 2.2%, Yeast: 0.5%</span>
+                <p class="mt-2">
+                  Assuming we need *500 grams of flour to make enough dough, we calculate the weights of each of the
+                  additional ingredients like this:
+                </p>
+                <p>
+                  Water: 69.1% divided by 100 = 0.691 * 500 = 345.5g water
+                  <br />
+                  Salt: 2.2% divided by 100 = 0.022 * 500 = 11.0g salt
+                  <br />
+                  Yeast: 0.5 divided by 100 = 0.005 * 500 = 2.5g yeast
+                </p>
+                <p>
+                  So our resulting conversion of the formula to a recipe is 500g flour, 345.5g water, 11g of salt and
+                  2.5g of yeast.
+                </p>
+                <div class="alert alert-primary alert-dismissible fade show mt-0 mb-1 py-1 pb-0" role="alert">
+                  <h5>Try Some Popular Formulas</h5>
+                  <button type="button" class="btn-close pt-0" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <p class="fs-5 mb-0">Popular Formulas</p>
+                <p class="fs-6 mt-0 mb-0">Sourdough Baguette:</p>
+                <span class="ms-2">Flour: 100%, Water: 73%, Salt: 2.0%, Yeast: 2.0%, Starter: 3.33%</span>
+                <p class="fs-6 mt-1 mb-0">Ciabatta:</p>
+                <span class="ms-2">Flour: 100%, Water: 76%, Salt: 2.0%, Yeast: 1.2%</span>
+                <p class="fs-6 mt-1 mb-0">Pain a L' Ancienne:</p>
+                <span class="ms-2">Flour: 100%, Water: 79.6%, Salt: 2.0%, Yeast: 0.7%</span>
+              </div>
+              <div class="small mt-3">
+                <hr class="bg-primary mt-2 mb-2" aria-hidden="true" />
+                <p class="mb-1">Proudly made with Typescript, HTML, & Bootstrap.</p>
+                <p class="mb-1">
+                  This content may not be copied, adapted, remixed, redistributed or used for commercial purposes
+                  without the expressed written consent of the author.
+                </p>
+                <p class="mt-0">Contents are ©2019-2023 by Anthony Hamlin</p>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="col-md-8">
           <div class="row">
             <div class="col-6">
@@ -60,19 +118,11 @@
               <div class="col-6">
                 <!-- water in -->
                 <label for="waterInput" class="form-lable text-nowrap">Water %:</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="waterInput"
-                  aria-describedby="water amount"
-                  value="69.1"
-                />
+                <input type="text" class="form-control" id="waterInput" aria-describedby="water amount" value="69.1" />
               </div>
               <div class="col-6">
                 <!-- water out -->
-                <label for="waterResultsQuantity" class="form-lable text-nowrap">
-                  Water in grams:
-                </label>
+                <label for="waterResultsQuantity" class="form-lable text-nowrap">Water in grams:</label>
                 <input
                   type="text"
                   class="form-control"
@@ -87,19 +137,11 @@
               <div class="col-6">
                 <!-- salt in -->
                 <label for="saltInput" class="form-lable text-nowrap">Salt %:</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="saltInput"
-                  aria-describedby="salt amount"
-                  value="2.2"
-                />
+                <input type="text" class="form-control" id="saltInput" aria-describedby="salt amount" value="2.2" />
               </div>
               <div class="col-6">
                 <!-- salt out -->
-                <label for="saltResultsQuantity" class="form-lable text-nowrap">
-                  Salt in grams:
-                </label>
+                <label for="saltResultsQuantity" class="form-lable text-nowrap">Salt in grams:</label>
                 <input
                   type="text"
                   class="form-control"
@@ -114,19 +156,11 @@
               <div class="col-6">
                 <!-- yeast in -->
                 <label for="yeastInput" class="form-lable text-nowrap">Yeast %:</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="yeastInput"
-                  aria-describedby="yeast amount"
-                  value="0.5"
-                />
+                <input type="text" class="form-control" id="yeastInput" aria-describedby="yeast amount" value="0.5" />
               </div>
               <div class="col-6">
                 <!-- yeast out -->
-                <label for="yeastResultsQuantity" class="form-lable text-nowrap">
-                  Yeast in grams:
-                </label>
+                <label for="yeastResultsQuantity" class="form-lable text-nowrap">Yeast in grams:</label>
                 <input
                   type="text"
                   class="form-control"
@@ -151,9 +185,7 @@
               </div>
               <div class="col-6">
                 <!-- sourdough starter out -->
-                <label for="starterResultsQuantity" class="form-lable text-nowrap">
-                  Starter in grams:
-                </label>
+                <label for="starterResultsQuantity" class="form-lable text-nowrap">Starter in grams:</label>
                 <input
                   type="text"
                   class="form-control"
@@ -168,19 +200,11 @@
               <div class="col-6">
                 <!-- fat/oil in -->
                 <label for="fatInput" class="form-lable">Fat/Oil %:</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="fatInput"
-                  aria-describedby="fat/oil amount"
-                  value="0"
-                />
+                <input type="text" class="form-control" id="fatInput" aria-describedby="fat/oil amount" value="0" />
               </div>
               <div class="col-6">
                 <!-- fat/oil out -->
-                <label for="fatResultsQuantity" class="form-lable text-nowrap">
-                  Fat/Oil in grams:
-                </label>
+                <label for="fatResultsQuantity" class="form-lable text-nowrap">Fat/Oil in grams:</label>
                 <input
                   type="text"
                   class="form-control"
@@ -221,84 +245,6 @@
               <hr class="bg-primary mt-3 mb-0" aria-hidden="true" />
             </div>
           </form>
-        </div>
-        <div class="col-md-4">
-          <!-- instructions -->
-          <div class="row">
-            <div class="col-12">
-              <h2>Instructions</h2>
-              <div class="small">
-                <p>
-                  Baker's formulas are a way to express the proportion of each ingredient relative
-                  to the total amount of flour. *The flour weight is always expressed as 100%. The
-                  calculations are to divide the ingredient percentage by 100 to obtain a decimal,
-                  then multiply the resulting decimal by the weight of the flour. **The form
-                  requires flour, water, salt and yeast as inputs while starter and fat/oil are
-                  optional.
-                </p>
-                <div
-                  class="alert alert-primary alert-dismissible fade show mt-0 mb-1 py-1 pb-0"
-                  role="alert"
-                >
-                  <h5>Check Out The Default Form Example</h5>
-                  <button
-                    type="button"
-                    class="btn-close pt-0"
-                    data-bs-dismiss="alert"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <h5>Formula Example</h5>
-                <p class="fs-6 mt-0 mb-0">Napolitano Pizza Dough:</p>
-                <span class="ms-2">Flour: 100%, Water: 69.1%, Salt: 2.2%, Yeast: 0.5%</span>
-                <p class="mt-2">
-                  Assuming we need *500 grams of flour to make enough dough, we calculate the
-                  weights of each of the additional ingredients like this:
-                </p>
-                <p>
-                  Water: 69.1% divided by 100 = 0.691 * 500 = 345.5g water
-                  <br />
-                  Salt: 2.2% divided by 100 = 0.022 * 500 = 11.0g salt
-                  <br />
-                  Yeast: 0.5 divided by 100 = 0.005 * 500 = 2.5g yeast
-                </p>
-                <p>
-                  So our resulting conversion of the formula to a recipe is 500g flour, 345.5g
-                  water, 11g of salt and 2.5g of yeast.
-                </p>
-                <div
-                  class="alert alert-primary alert-dismissible fade show mt-0 mb-1 py-1 pb-0"
-                  role="alert"
-                >
-                  <h5>Try Some Popular Formulas</h5>
-                  <button
-                    type="button"
-                    class="btn-close pt-0"
-                    data-bs-dismiss="alert"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <p class="fs-5 mb-0">Popular Formulas</p>
-                <p class="fs-6 mt-0 mb-0">Sourdough Baguette:</p>
-                <span class="ms-2">
-                  Flour: 100%, Water: 73%, Salt: 2.0%, Yeast: 2.0%, Starter: 3.33%
-                </span>
-                <p class="fs-6 mt-1 mb-0">Ciabatta:</p>
-                <span class="ms-2">Flour: 100%, Water: 76%, Salt: 2.0%, Yeast: 1.2%</span>
-                <p class="fs-6 mt-1 mb-0">Pain a L' Ancienne:</p>
-                <span class="ms-2">Flour: 100%, Water: 79.6%, Salt: 2.0%, Yeast: 0.7%</span>
-              </div>
-              <div class="small mt-3">
-                <hr class="bg-primary mt-2 mb-2" aria-hidden="true" />
-                <p class="mb-1">Proudly made with Typescript, HTML, & Bootstrap.</p>
-                <p class="mb-1">
-                  This content may not be copied, adapted, remixed, redistributed or used for
-                  commercial purposes without the expressed written consent of the author.
-                </p>
-                <p class="mt-0">Contents are ©2019-2023 by Anthony Hamlin</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
