@@ -13,6 +13,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="manifest" href="" />
     <title>Baker's Formula Converter - Anthony Hamlin</title>
   </head>
   <body>
@@ -20,8 +21,8 @@
       <div class="row mt-2">
         <div class="col-12">
           <h1 class="text-primary">Baker's Formula Converter</h1>
-          <hr class="bg-primary mt-0 mb-1" aria-hidden="true" />
           <p class="lead">Convert baker's percent formulas into gram based recipes.</p>
+          <hr class="bg-primary mt-0 mb-0" aria-hidden="true" />
         </div>
       </div>
       <!-- form columns -->
@@ -39,10 +40,10 @@
                   **The form requires flour, water, salt and yeast as inputs while starter and fat/oil are optional.
                 </p>
                 <div class="alert alert-primary alert-dismissible fade show mt-0 mb-1 py-1 pb-0" role="alert">
-                  <h5>Check Out The Default Form Example</h5>
+                  <h3>Check Out The Default Form Example</h3>
                   <button type="button" class="btn-close pt-0" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
-                <h5>Formula Example</h5>
+                <h4>Formula Example</h4>
                 <p class="fs-6 mt-0 mb-0">Napolitano Pizza Dough:</p>
                 <span class="ms-2">Flour: 100%, Water: 69.1%, Salt: 2.2%, Yeast: 0.5%</span>
                 <p class="mt-2">
@@ -71,15 +72,7 @@
                 <span class="ms-2">Flour: 100%, Water: 76%, Salt: 2.0%, Yeast: 1.2%</span>
                 <p class="fs-6 mt-1 mb-0">Pain a L' Ancienne:</p>
                 <span class="ms-2">Flour: 100%, Water: 79.6%, Salt: 2.0%, Yeast: 0.7%</span>
-              </div>
-              <div class="small mt-3">
-                <hr class="bg-primary mt-2 mb-2" aria-hidden="true" />
-                <p class="mb-1">Proudly made with Typescript, HTML, & Bootstrap.</p>
-                <p class="mb-1">
-                  This content may not be copied, adapted, remixed, redistributed or used for commercial purposes
-                  without the expressed written consent of the author.
-                </p>
-                <p class="mt-0">Contents are ©2019-2023 by Anthony Hamlin</p>
+                <hr class="bg-primary mt-3 mb-2" aria-hidden="true" />
               </div>
             </div>
           </div>
@@ -94,7 +87,7 @@
                 type="text"
                 class="form-control"
                 id="flourBase"
-                aria-describedby="flour percentage base amount"
+                aria-describedby="base-flour-percentage-amount"
                 readonly
                 value="100%"
               />
@@ -242,7 +235,15 @@
                 onclick="clearForm()"
                 aria-label="clear form"
               />
-              <hr class="bg-primary mt-3 mb-0" aria-hidden="true" />
+              <div class="small mt-3">
+                <hr class="bg-primary mt-2 mb-2" aria-hidden="true" />
+                <p class="mb-1">Proudly made with Typescript, HTML, & Bootstrap.</p>
+                <p class="mb-1">
+                  This content may not be copied, adapted, remixed, redistributed or used for commercial purposes
+                  without the expressed written consent of the author.
+                </p>
+                <p class="mt-0">Contents are ©2019-2023 by Anthony Hamlin</p>
+              </div>
             </div>
           </form>
         </div>
